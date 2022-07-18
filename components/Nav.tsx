@@ -12,7 +12,6 @@ export default function Nav({}) {
   const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => {
     setMouted(true);
-    setTheme("light");
   }, []);
 
   return (

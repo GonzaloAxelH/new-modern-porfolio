@@ -10,6 +10,7 @@ module.exports = {
       "cdn.hashnode.com",
       "res.craft.do",
       "res.cloudinary.com",
+      "braydoncoyer.dev",
     ],
   },
 };

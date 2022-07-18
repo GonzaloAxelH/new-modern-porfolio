@@ -10,12 +10,6 @@ module.exports = {
   important: true,
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        mono: [...defaultTheme.fontFamily.mono],
-        headings: ["Manrope", ...defaultTheme.fontFamily.sans],
-        fancy: ["Sriracha"],
-      },
       colors: {
         orange: colors.orange,
         blueGray: colors.slate,
@@ -30,7 +24,13 @@ module.exports = {
         amber: colors.amber,
         sky: colors.sky,
       },
-      typography: (theme) => ({
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        mono: [...defaultTheme.fontFamily.mono],
+        headings: ["Manrope", ...defaultTheme.fontFamily.sans],
+        fancy: ["Sriracha"],
+      },
+      typografy: (theme) => ({
         DEFAULT: {
           css: {
             color: theme("colors.slate.700"),
