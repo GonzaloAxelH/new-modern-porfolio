@@ -8,7 +8,7 @@ const NavItem = ({ href, text }) => {
   return (
     <Link href={href || "/"}>
       <a
-        className={`${
+        className={` text-center ${
           isActive
             ? "font-bold text-gray-900 dark:text-gray-200"
             : "font-normal text-gray-600 dark:text-gray-400"

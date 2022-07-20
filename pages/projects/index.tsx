@@ -82,34 +82,34 @@ export default function Proyects() {
       </div>
       <div className="grid grid-cols-1 gap-x-12 gap-y-24 md:grid-cols-3">
         <div className="col-span-1">
-          <h2 className="mt-0 dark:text-white">CSS Art Challenge</h2>
+          <h2 className="mt-0 dark:text-white">Fastfood Ilo Delivery </h2>
           <p className="dark:text-slate-400">
-            I created CSS Art Challenge to help people discover that CSS can be
-            fun and more than just creating basic layouts by competing in
-            monthly challenges and winning prizes!
+            Proyecto de un sistema web completo de venta de comida rapida
+            online, integrado con una plataforma de pagos en linea para que los
+            clientes puedan pagar en linea y recibir su pedido en su casa.
           </p>
           <a
             className="items-center justify-center w-full px-12 py-3 font-medium text-white no-underline rounded-full cursor-pointer md:w-auto md:inline-flex bg-midnight dark:bg-gray-200 dark:text-midnight general-ring-state"
-            href="#"
+            href="https://fastfoodilo.vercel.app/fastfood"
             target="_blank"
             rel="noreferrer"
           >
-            Visit CSS Art Challenge
+            Visit Fastfood Ilo
           </a>
         </div>
         <div className="col-span-2">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
             <div className="relative col-span-5 overflow-hidden bg-transparent rounded-lg  md:h-[450px] h-auto">
               <Image
-                className="absolute left-[200px]"
+                className="absolute"
                 objectFit="fill"
-                src="https://res.cloudinary.com/braydoncoyer/image/upload/v1646346494/mbpro_css_art_challenge_thh7yw.png"
+                src="https://gonzalo.vercel.app/_next/image?url=%2Fimagesproyect%2Ffastfood-preview.png&w=1920&q=75"
                 placeholder="blur"
-                blurDataURL="https://res.cloudinary.com/braydoncoyer/image/upload/v1646346494/mbpro_css_art_challenge_thh7yw.png"
+                blurDataURL="https://gonzalo.vercel.app/_next/image?url=%2Fimagesproyect%2Ffastfood-preview.png&w=1920&q=75"
                 width={5110}
                 height={3139}
                 layout="intrinsic"
-                alt={"Bundle, LLC on a Macbook Pro"}
+                alt={"Fast Food Ilo Proyect"}
               />
             </div>
           </div>

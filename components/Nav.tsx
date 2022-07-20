@@ -24,7 +24,7 @@ export default function Nav({}) {
         </div>
         <ButtonToggleMenu onClick={() => setIsOpen(true)} />
 
-        <nav className="hidden space-x-6 text-lg md:flex">
+        <nav className="hidden space-x-6 text-lg lg:flex">
           <NavItem href="/" text="Home" />
           <NavItem href="/about" text="About" />
           <NavItem href="/projects" text="Projects & Applications" />

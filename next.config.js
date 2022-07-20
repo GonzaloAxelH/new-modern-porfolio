@@ -11,6 +11,7 @@ module.exports = {
       "res.craft.do",
       "res.cloudinary.com",
       "braydoncoyer.dev",
+      "gonzalo.vercel.app",
     ],
   },
 };
