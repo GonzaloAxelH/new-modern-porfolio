@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "../components/Container";
 
-export default function About() {
+export default function CommunityAll() {
   return (
     <Container showcircles>
       <div>
-        <h1 className="dark:text-white">About</h1>
+        <h1>CommunityAll</h1>
       </div>
     </Container>
   );

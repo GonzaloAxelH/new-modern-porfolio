@@ -27,7 +27,7 @@ export default function Nav({}) {
         <nav className="hidden space-x-6 text-lg md:flex">
           <NavItem href="/" text="Home" />
           <NavItem href="/about" text="About" />
-          <NavItem href="/projects" text="Projects" />
+          <NavItem href="/projects" text="Projects & Applications" />
           <NavItem href="/blog" text="Blog" />
           <NavItem href="/community-wall" text="Community wall" />
         </nav>

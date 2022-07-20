@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { siteMetadata } from "../data/SiteMetadata";
 import Nav from "./Nav";
+import PageTransition from "./PageTransition";
 
 enum PageType {
   WEBSITE = "website",
@@ -51,7 +52,9 @@ export function Container(props) {
             </div>
           </div>
         )}
-        <div className="z-10">{children}</div>
+        <div className="z-10">
+          <PageTransition>{children}</PageTransition>
+        </div>
       </main>
     </div>
   );

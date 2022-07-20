@@ -28,9 +28,9 @@ const ArticleCard = ({ article }) => {
             alt={"article cover"}
           />
           <div className="text-left w-full">
-            <h3 className="mt-2 text-2xl">{article.title}</h3>
+            <h3 className="mt-2 text-2xl dark:text-white">{article.title}</h3>
 
-            <span className="text-base font-semibold flex items-center">
+            <span className="text-base font-semibold flex items-center dark:text-white">
               {new Date(article.publishedDate).toLocaleDateString(
                 siteMetadata.locale,
                 {

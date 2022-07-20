@@ -9,6 +9,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.4",
+    "framer-motion": "^6.5.1",
     "next": "latest",
     "next-themes": "^0.2.0",
     "react": "^17.0.2",

@@ -36,14 +36,14 @@ const IndexPage = () => {
       <div>
         <div>
           <div className="grid items-center   grid-cols-1 mt-12 text-center  md:justify-between md:mt-20 md:text-left md:grid-cols-6 lg:grid-cols-6">
-            <span className="font-bold order-2 col-span-5 text-4xl leading-tight md:leading-normal md:order-1 sm:text-5xl mt-4 mb-6 mr-3">
+            <h1 className="font-bold order-2 col-span-5 text-4xl leading-tight md:leading-normal md:order-1 sm:text-5xl mt-4 mb-6 mr-3 dark:text-white">
               Hola soy {"  "}
               <span className="text-teal-500 dark:text-teal-400">
-                <b className="">Gonzalo Axel </b>
+                <b className="">{`Gonzalo,`} </b>
                 {"  "}
               </span>
-              y soy un desarrollador que construye aplicaciones web modernas
-            </span>
+              desarrollador autodidacta de aplicaciones web modernas
+            </h1>
             <div className="order-1 md:order-2">
               <Image
                 alt="Braydon Coyer"
@@ -59,17 +59,19 @@ const IndexPage = () => {
           </div>
           <div className="space-y-6 md:space-y-0 md:space-x-4">
             <Button buttonType="primary" onClick={() => push("/blog")}>
-              Read the blog
+              Vea mi Blog
             </Button>
             <Button buttonType="secondary" onClick={() => push("/about")}>
-              More about me
+              Mas sobre mi
             </Button>
           </div>
         </div>
         <hr className="hr"></hr>
         <div>
-          <h2>Me encanta compartir mis conocimientos.</h2>
-          <p>
+          <h2 className="dark:text-white">
+            Me encanta compartir mis conocimientos.
+          </h2>
+          <p className="dark:text-gray-300">
             Echa un vistazo a algunas de mis publicaciones y proyectos mas
             recientes.
           </p>

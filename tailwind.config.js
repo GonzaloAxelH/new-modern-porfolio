@@ -24,12 +24,7 @@ module.exports = {
         amber: colors.amber,
         sky: colors.sky,
       },
-      fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        mono: [...defaultTheme.fontFamily.mono],
-        headings: ["Manrope", ...defaultTheme.fontFamily.sans],
-        fancy: ["Sriracha"],
-      },
+      fontFamily: {},
       typografy: (theme) => ({
         DEFAULT: {
           css: {
