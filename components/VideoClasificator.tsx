@@ -16,40 +16,30 @@ export default function VideoClasificator() {
   const canvas = refCanvas.current;
   const otroCanvas = refCanvas2.current;
   useEffect(() => {
+    var opciones = {};
+    const getUserMedia = async () => {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: false,
+          video: {
+            width: tamano,
+            height: tamano,
+          },
+        });
+        video.srcObject = stream;
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getUserMedia();
+  }, []);
+
+  useEffect(() => {
     const loadModel = async () => {
       setModelo(await tf.loadLayersModel("/model.json"));
     };
     loadModel();
-    mostrarCamara();
-  });
-
-  function mostrarCamara() {
-    var opciones = {
-      audio: false,
-      video: {
-        width: tamano,
-        height: tamano,
-      },
-    };
-
-    if (navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices
-        .getUserMedia(opciones)
-        .then(function (stream) {
-          setCurrentStream(stream);
-          video.srcObject = currentStream;
-          procesarCamara();
-          predecir();
-        })
-        .catch(function (err) {
-          alert("No se pudo utilizar la camara :(");
-          console.log(err);
-          alert(err);
-        });
-    } else {
-      alert("No existe la funcion getUserMedia");
-    }
-  }
+  }, []);
 
   function cambiarCamara() {
     if (currentStream) {
@@ -128,15 +118,6 @@ export default function VideoClasificator() {
     setTimeout(predecir, 150);
   }
 
-  /**
-   * Hermite resize - fast image resize/resample using Hermite filter. 1 cpu version!
-   *
-   * @param {HtmlElement} canvas
-   * @param {int} width
-   * @param {int} height
-   * @param {boolean} resize_canvas if true, canvas will be resized. Optional.
-   * Cambiado por RT, resize canvas ahora es donde se pone el chiqitillllllo
-   */
   function resample_single(canvas, width, height, resize_canvas) {
     var width_source = canvas.width;
     var height_source = canvas.height;
@@ -208,7 +189,6 @@ export default function VideoClasificator() {
 
   return (
     <div>
-      <canvas ref={refCanvas} />
       <section className="text-gray-700 body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
@@ -231,12 +211,7 @@ export default function VideoClasificator() {
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <video
-              id="video"
-              playsInline
-              autoPlay
-              style={{ width: "1px" }}
-            ></video>
+            <video playsInline autoPlay style={{ width: "1px" }}></video>
             <canvas
               ref={refCanvas}
               width="400"
