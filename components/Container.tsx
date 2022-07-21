@@ -7,11 +7,14 @@ import PageTransition from "./PageTransition";
 enum PageType {
   WEBSITE = "website",
   ARTICLE = "article",
+  TUTORIAL = "tutorial",
+  PROYECT = "proyect",
+  TRICKS = "tricks",
 }
 
 export function Container(props) {
   const { children, ...customMeta } = props;
-  const router = useRouter();
+  const { asPath } = useRouter();
 
   const meta = {
     title: siteMetadata.title,
@@ -32,10 +35,7 @@ export function Container(props) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta
-          property="og:url"
-          content={`${siteMetadata.siteUrl}${router.asPath}`}
-        />
+        <meta property="og:url" content={`${siteMetadata.siteUrl}${asPath}`} />
       </Head>
       <Nav />
       <main
